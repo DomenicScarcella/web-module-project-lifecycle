@@ -1,21 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { ExternalLink } from 'react-external-link';
 
 const Card = ({user}) => {
-    console.log(user);
     return (
-        <div>
-            <div>
-                <img width='100px' src={user.avatar_url} alt='user avatar'/>
+        <div className='card'>
+            <div className='cardImg'>
+                <img src={user.avatar_url} alt='user avatar'/>
             </div>
-            <div>
+            <div className='cardText'>
                 <h2>{user.name}</h2>
                 <h3><i>{user.login}</i></h3>
-                <p>Location: {user.location}</p>
-                <p>Profile link: {user.html_url}</p>
-                <p>Followers: {user.followers}</p>
-                <p>Following: {user.following}</p>
-                <p>Bio: {user.bio}</p>
+                <p><ExternalLink href={user.html_url} /><br /><br />
+                <strong>Location:</strong> {user.location}<br />
+                <strong>Followers:</strong> {user.followers}<br />
+                <strong>Following:</strong> {user.following}<br />
+                <strong>Bio:</strong> {user.bio}</p>
             </div>
         </div>
     );

@@ -42,7 +42,8 @@ class App extends React.Component {
           <p> ❤️'s </p>
           <img src={gitLogo} width="100" alt="GitHub Logo" />
         </div>
-        <div>
+        <div className='appBody'>
+          <div className='space'></div>
           <Card user={this.state.user}/>
           <h2>Followers:</h2>
           <CardList followers={this.state.followers}/>

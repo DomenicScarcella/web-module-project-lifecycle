@@ -1,17 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const CardList = ({followers}) => {
-    console.log('cardlist.js', followers);
-
-
-
     return (
-        <div>
+        <div className='cardList'>
             {
                 followers.map(follower => {
                     return(
-                        <div>
+                        <div className='follower'>
                             <div>
                                 <img width='100px' src={follower.avatar_url} alt='user avatar'/>
                             </div>
